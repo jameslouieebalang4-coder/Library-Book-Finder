@@ -15,7 +15,7 @@ A lightweight web app for a school library. Students, teachers, and readers can 
 - **Reliability:** 100% generated CSS covers. No external images that can break or fail to load.
 
 ## Tools Used
-- **ChatGPT / Claude:** Used for scaffolding the project structure, writing the filter/pagination logic, and generating the fictional book data. I reviewed all generated code, adjusted the CSS layout, and can explain exactly how the pagination and filter states work.
+- **ChatGPT / Deepseek:** Used for scaffolding the project structure, writing the filter/pagination logic, and generating the fictional book data. I reviewed all generated code, adjusted the CSS layout, and can explain exactly how the pagination and filter states work.
 
 ## Data Note
 All 24 books, authors, and school details are fictional sample data created for this demo. Cover art is generated dynamically using CSS based on the book's genre and ID.
