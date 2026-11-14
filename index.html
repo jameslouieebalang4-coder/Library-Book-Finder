@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northfield Library — Book Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#" data-view="catalogue">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Northfield Library</span>
+      </a>
+      <nav class="topnav">
+        <a href="#" data-view="catalogue" class="nav-link active">Catalogue</a>
+        <a href="#" data-view="new" class="nav-link">New arrivals</a>
+        <a href="#" data-view="hours" class="nav-link">Opening hours</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CATALOGUE VIEW -->
+  <div id="view-catalogue">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Northfield Secondary School</p>
+        <h1>Find your next book.</h1>
+        <p class="lede">Search 24 titles across fiction, science, history, reference and poetry. See what's on the shelf before you walk over.</p>
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input type="search" id="search" placeholder="Search by title or author…" autocomplete="off" />
+        </div>
+      </div>
+    </section>
+
+    <main class="wrap layout">
+      <aside class="sidebar">
+        <div class="filter-block">
+          <h2>Genre</h2>
+          <div id="genreList" class="chips"></div>
+        </div>
+        <div class="filter-block">
+          <h2>Availability</h2>
+          <label class="switch">
+            <input type="checkbox" id="availableOnly" />
+            <span>Available only</span>
+          </label>
+        </div>
+        <button id="clear" class="btn-clear">Clear all filters</button>
+      </aside>
+
+      <section class="results">
+        <div class="results-head">
+          <p id="count" class="count"></p>
+          <div class="pager" id="pager" hidden>
+            <button id="prev" aria-label="Previous page">←</button>
+            <span id="pageLabel"></span>
+            <button id="next" aria-label="Next page">→</button>
+          </div>
+        </div>
+        <div id="grid" class="grid"></div>
+        <div id="empty" class="empty" hidden>
+          <h3>No books match that search.</h3>
+          <p>Try a different title, author or genre — or clear your filters.</p>
+          <button id="reset" class="btn-clear">Reset filters</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- NEW ARRIVALS VIEW -->
+  <div id="view-new" hidden>
+    <section class="hero hero-small">
+      <div class="wrap">
+        <p class="eyebrow">Just added</p>
+        <h1>New arrivals</h1>
+        <p class="lede">The six most recent books added to the catalogue. Borrowed titles are back on the shelf in a few days.</p>
+      </div>
+    </section>
+    <main class="wrap">
+      <div id="newGrid" class="grid"></div>
+    </main>
+  </div>
+
+  <!-- OPENING HOURS VIEW -->
+  <div id="view-hours" hidden>
+    <section class="hero hero-small">
+      <div class="wrap">
+        <p class="eyebrow">Visit us</p>
+        <h1>Opening hours</h1>
+        <p class="lede">Northfield Library is on the ground floor, Room 14, next to the science block.</p>
+      </div>
+    </section>
+    <main class="wrap hours-layout">
+      <table class="hours-table">
+        <thead>
+          <tr><th>Day</th><th>Open</th><th>Closed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday</td><td>8:00</td><td>16:00</td></tr>
+          <tr><td>Tuesday</td><td>8:00</td><td>16:00</td></tr>
+          <tr><td>Wednesday</td><td>8:00</td><td>16:00</td></tr>
+          <tr><td>Thursday</td><td>8:00</td><td>16:00</td></tr>
+          <tr><td>Friday</td><td>8:00</td><td>15:00</td></tr>
+          <tr class="closed"><td>Saturday</td><td colspan="2">Closed</td></tr>
+          <tr class="closed"><td>Sunday</td><td colspan="2">Closed</td></tr>
+        </tbody>
+      </table>
+      <aside class="hours-note">
+        <h3>Before you visit</h3>
+        <p>Bring your student card to borrow. Up to 3 books at a time for 14 days. Reference books stay in the library.</p>
+        <p class="muted">Questions? Ask at the front desk or the library office in Room 14.</p>
+      </aside>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>Northfield Library · Room 14 · Open Mon–Fri, 8am–4pm</p>
+      <p class="muted">Demo site with fictional books and data.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
